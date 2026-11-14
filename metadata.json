@@ -1,0 +1,8 @@
+{
+  "name": "Personal Expense Tracker Management System",
+  "description": "Manage personal income, daily expenses, category budgets, automatic balance calculations, and financial analytics with PDF/CSV reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
