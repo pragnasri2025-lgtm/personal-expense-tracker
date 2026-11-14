@@ -31,12 +31,15 @@ export const PAYMENT_METHODS = [
   'Digital Wallet',
 ] as const;
 
-const dataDir = path.resolve(process.cwd(), 'data');
+const dbPath = process.env.DB_PATH
+  ? path.resolve(process.env.DB_PATH)
+  : path.resolve(process.cwd(), 'data', 'expense_tracker.db');
+
+const dataDir = path.dirname(dbPath);
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
 
-const dbPath = path.join(dataDir, 'expense_tracker.db');
 export const db = new DatabaseSync(dbPath);
 
 db.exec('PRAGMA foreign_keys = ON;');
