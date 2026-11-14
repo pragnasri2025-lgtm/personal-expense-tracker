@@ -1,0 +1,7 @@
+Flask
+gunicorn
+mysql-connector-python
+python-dotenv
+chardet (4.0.0)
+lsb_release
+pkg_resources
